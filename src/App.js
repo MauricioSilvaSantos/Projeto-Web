@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './styles/style.scss';
+
+const loading = (
+  <div className="spinner-border" role="status">
+    <span className="visually-hidden"></span>
+  </div>
+);
+
+// layout
+const Layout = React.lazy(() => import('./layout/Main'));
+
+// Pages
+const Login = React.lazy(() => import('./pages/login/Login'));
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <React.Suspense fallback={loading}>
+        <Switch>
+          <Route exact path="/login" name="Login" render={props => <Login {...props}/>} />
+          <Route path="/" name="Home" render={props => <Layout {...props}/>} />
+        </Switch>
+      </React.Suspense>
+    </BrowserRouter>
+  )
 }
 
 export default App;
