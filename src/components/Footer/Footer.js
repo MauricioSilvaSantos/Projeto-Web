@@ -1,8 +1,6 @@
 import React from 'react';
+import { Col, Container, ListGroup, Row } from 'react-bootstrap';
 import Particles from 'react-particles-js';
-import { Col, Container, ListGroup, ListGroupItem, Row, 
-  // CardImg
-} from 'reactstrap';
 import particlesFooter from '../../particlesFooter';
 
 export default function Footer() {
@@ -15,29 +13,28 @@ export default function Footer() {
             <Col lg="4">
               <div className="footer-about mt-50" >
                 <a className="logo-footer text-white" href="home">
-                  {/* <CardImg></CardImg> */}
                   <div>LOGO AQUI</div>
                 </a>
               </div>
             </Col>
             <Col lg="5">
               <h4 className="text-white">Paginas ?</h4>
-              <ListGroup flush>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Cras justo odio</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Morbi leo risus</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Porta ac consectetur ac</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Vestibulum at eros</ListGroupItem>
+              <ListGroup variant="flush">
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Cras justo odio</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Dapibus ac facilisis in</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Morbi leo risus</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Porta ac consectetur ac</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Vestibulum at eros</ListGroup.Item>
               </ListGroup>
             </Col>
             <Col lg="3">
               <h4 className="text-white">Contatos</h4>
-              <ListGroup flush>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Cras justo odio</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Morbi leo risus</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Porta ac consectetur ac</ListGroupItem>
-                <ListGroupItem className="border-0 bg-transparent text-white" tag="a" href="#">Vestibulum at eros</ListGroupItem>
+              <ListGroup variant="flush">
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Cras justo odio</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Dapibus ac facilisis in</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Morbi leo risus</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Porta ac consectetur ac</ListGroup.Item>
+                <ListGroup.Item className="border-0 bg-transparent text-white" tag="a" href="#">Vestibulum at eros</ListGroup.Item>
               </ListGroup>
             </Col>
           </Row>

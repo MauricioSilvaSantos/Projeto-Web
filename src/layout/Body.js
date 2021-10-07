@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
+import { Container } from 'react-bootstrap';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { Container, Fade } from 'reactstrap';
 import routes from '../routes';
 
 const loading = (
@@ -24,9 +24,9 @@ export default function Body() {
                     exact={route.exact}
                     name={route.name}
                     render={(props) => (
-                      <Fade>
+                      <div>
                         <route.component {...props} />
-                      </Fade>
+                      </div>
                     )}
                   />
                 )

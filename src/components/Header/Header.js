@@ -1,30 +1,15 @@
 import React from 'react';
+import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import Particles from 'react-particles-js';
 import configParticles from '../../configParticles';
-import { Col, Container, Row, UncontrolledCarousel } from 'reactstrap';
+
+import img1 from '../../assets/carousel/img1.png';
+import img2 from '../../assets/carousel/img2.png';
+import img3 from '../../assets/carousel/img3.png';
+import img4 from '../../assets/carousel/img4.png';
+import img5 from '../../assets/carousel/img5.png';
 
 export default function Header() {
-
-  const items = [
-    {
-      src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-      caption: 'Slide 1',
-      header: ' ',
-      key: '1'
-    },
-    {
-      src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-      caption: 'Slide 2',
-      header: ' ',
-      key: '2'
-    },
-    {
-      src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-      caption: 'Slide 3',
-      header: ' ',
-      key: '3'
-    }
-  ];
 
   return (
     <>
@@ -32,19 +17,44 @@ export default function Header() {
         <Container>
           <Row className="justify-content-center">
             <Col lg="8">
-              <div className="header-hero-content text-center"></div>
+              <div className="header-hero-content text-center">
+                <h4>
+                  Cupidatat Lorem sunt ipsum esse ullamco cillum elit fugiat.
+                  Minim aute quis tempor sint nostrud exercitation. Sint tempor
+                  id consectetur ex pariatur aute amet adipisicing officia
+                  ipsum. Irure labore culpa laborum duis ipsum non magna
+                  deserunt. Eiusmod proident consectetur fugiat deserunt sint
+                  irure ipsum. Consequat cillum officia sit velit dolore
+                  voluptate nisi ex ad nostrud Lorem aliqua. Nulla est minim
+                  adipisicing irure dolor deserunt proident eiusmod.
+                </h4>
+              </div>
             </Col>
           </Row>
           <Row className="align-items-center">
             <Col className="carousel-center" lg="12">
-              <UncontrolledCarousel className="carousel-fade" items={items} controls={false} indicators={false}/>
+              <Carousel fade>
+                <Carousel.Item>
+                  <img className="d-block w-100" src={img1} alt="..." />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img className="d-block w-100" src={img2} alt="..."/>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img className="d-block w-100" src={img3} alt="..." />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img className="d-block w-100" src={img4} alt="..." />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img className="d-block w-100" src={img5} alt="..." />
+                </Carousel.Item>
+              </Carousel>
             </Col>
           </Row>
         </Container>
-        {/* <div className="particles-1" id="particles-1"> */}
-          <Particles className="particles-1" params={configParticles}/>
-        {/* </div> */}
+        <Particles className="particles-1" params={configParticles} />
       </div>
     </>
-  )
+  );
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Button } from 'reactstrap';
+import { Container, Nav, Navbar, Button, Row, Col } from 'react-bootstrap';
 
 const MenuSuperior = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState('');
-  const toggle = () => setIsOpen(!isOpen);
+  // const toggle = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -20,6 +20,29 @@ const MenuSuperior = () => {
     <>
       <div className={`navbar-area${scrolled}`}>
         <Container>
+          <Row>
+            <Col lg="12">
+              <Navbar collapseOnSelect expand="lg">
+                <Navbar.Brand >LOGO AQUI</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                  <Nav className="w-100 justify-content-center">
+                    <Nav.Link href="#">Início</Nav.Link>
+                    <Nav.Link href="#">Pagina 2</Nav.Link>
+                    <Nav.Link href="#">Pagina 3</Nav.Link>
+                    <Nav.Link href="#">Pagina 4</Nav.Link>
+                    <Nav.Link href="#">Pagina 5</Nav.Link>
+                    <Nav.Link href="#">Pagina 6</Nav.Link>
+                  </Nav>
+                  <Nav>
+                    <Button variant="warning">Login</Button>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
+            </Col>
+          </Row>
+        </Container>
+        {/* <Container>
           <Row>
             <Col lg="12">
               <Navbar light expand="lg">
@@ -53,7 +76,7 @@ const MenuSuperior = () => {
               </Navbar>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
       </div>
     </>
   );
