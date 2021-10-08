@@ -23,12 +23,12 @@ const MenuSuperior = () => {
           <Row>
             <Col lg="12">
               <Navbar collapseOnSelect expand="lg">
-                <Navbar.Brand >LOGO AQUI</Navbar.Brand>
+                <Navbar.Brand >LOGO AQ</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="w-100 justify-content-center">
                     <Nav.Link href="#">Início</Nav.Link>
-                    <Nav.Link href="#">Pagina 2</Nav.Link>
+                    <Nav.Link href="#">Recursos</Nav.Link>
                     <Nav.Link href="#">Pagina 3</Nav.Link>
                     <Nav.Link href="#">Pagina 4</Nav.Link>
                     <Nav.Link href="#">Pagina 5</Nav.Link>
