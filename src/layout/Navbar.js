@@ -22,7 +22,7 @@ const MenuSuperior = () => {
         <Container>
           <Row>
             <Col lg="12">
-              <Navbar collapseOnSelect expand="lg">
+              <Navbar collapseOnSelect expand="lg" className="text-white">
                 <Navbar.Brand >LOGO AQ</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
